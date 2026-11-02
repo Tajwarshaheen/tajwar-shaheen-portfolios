@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-main: #06111F;
+    --bg-secondary: #0A1929;
+    --bg-card: #0D1E30;
+    --primary-blue: #168BFF;
+    --accent-blue: #29B6F6;
+    --text-white: #F5F7FA;
+    --text-secondary: #A8B5C5;
+    --border-color: #18344D;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #06111F;
+    color: #F5F7FA;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #06111F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #18344D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #168BFF;
+}
+
+/* Subtle glow effects */
+.blue-glow {
+  box-shadow: 0 0 25px -5px rgba(22, 139, 255, 0.25);
+}
+
+.blue-glow-hover:hover {
+  box-shadow: 0 0 30px -5px rgba(41, 182, 246, 0.35);
+}
+
+.subtle-border {
+  border: 1px solid #18344D;
+}
+
+.subtle-border-hover:hover {
+  border-color: #168BFF;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, #F5F7FA 20%, #29B6F6 80%, #168BFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-brand {
+  background: linear-gradient(135deg, #168BFF 0%, #29B6F6 100%);
+}
+
+.card-gradient {
+  background: linear-gradient(180deg, #0D1E30 0%, #0A1929 100%);
+}
