@@ -11,6 +11,8 @@ import {
 } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import { personalInfo, aboutCards } from '../data/portfolioData';
+import profileImage from '../assets/images/tajwar_profile_1793376652112.jpg';
+
 
 const cardIconMap = {
   GraduationCap,
@@ -44,7 +46,7 @@ export default function About() {
               <div className="aspect-[4/3] w-full overflow-hidden bg-[#0A1929]">
                 {!imgError ? (
                   <img
-                    src={personalInfo.workspaceImage}
+                   src={profileImage}
                     alt="Tajwar's Developer Workspace Setup"
                     referrerPolicy="no-referrer"
                     onError={() => setImgError(true)}
