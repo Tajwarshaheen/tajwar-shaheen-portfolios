@@ -25,9 +25,11 @@ export const personalInfo = {
     "Hello! I'm Tajwar Shaheen, a dedicated web developer and digital marketing strategist based in Pakistan. My journey in technology started with a deep curiosity for how interactive digital experiences are engineered and how brands cultivate engaged audiences on the web.",
   bioParagraph2:
     "I specialize in crafting responsive, high-performance web interfaces with React.js, Tailwind CSS, and modern JavaScript, coupled with strategic digital marketing techniques that turn visitors into loyal users. I believe in clean code, purposeful design, and continuous learning.",
- profileImage:profileImage,
+  profileImage: profileImage,
   workspaceImage: "/workspace.jpg",
-  cvFileName: "Tajwar_Shaheen_CV.pdf",
+  cvFileName: "Tajwar_CV.pdf",
+  cvPdfUrl: "/Tajwar_CV.pdf",
+  cvImageUrl: "/assets/aistudio/White_Cream_And_Beige_Geometric_Minimalist_Graphic_Designer_Resume_7c716fe1.jpg",
 };
 
 export const socialLinks = [

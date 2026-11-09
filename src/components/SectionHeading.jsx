@@ -11,18 +11,18 @@ export default function SectionHeading({
   const isCenter = align === 'center';
 
   return (
-    <div className={`mb-12 md:mb-16 ${isCenter ? 'text-center mx-auto max-w-2xl' : 'max-w-2xl'}`}>
+    <div className={`mb-10 sm:mb-12 md:mb-16 ${isCenter ? 'text-center mx-auto max-w-2xl' : 'max-w-2xl'}`}>
       {kicker && (
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.4 }}
-          className="inline-flex items-center gap-2 mb-3 text-xs md:text-sm font-semibold tracking-wider uppercase text-[#29B6F6]"
+          className="inline-flex items-center gap-2 mb-2 sm:mb-3 text-[11px] sm:text-xs md:text-sm font-semibold tracking-wider uppercase text-[#29B6F6]"
         >
-          <span className="w-6 h-[2px] bg-[#168BFF]" aria-hidden="true" />
+          <span className="w-4 sm:w-6 h-[2px] bg-[#168BFF]" aria-hidden="true" />
           <span>{kicker}</span>
-          {isCenter && <span className="w-6 h-[2px] bg-[#168BFF]" aria-hidden="true" />}
+          {isCenter && <span className="w-4 sm:w-6 h-[2px] bg-[#168BFF]" aria-hidden="true" />}
         </motion.div>
       )}
 
@@ -31,7 +31,7 @@ export default function SectionHeading({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#F5F7FA]"
+        className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#F5F7FA] break-words"
         style={{ textWrap: 'balance' }}
       >
         {highlightWord ? (
@@ -52,7 +52,7 @@ export default function SectionHeading({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-3 text-sm sm:text-base text-[#A8B5C5] leading-relaxed"
+          className="mt-2.5 sm:mt-3 text-xs sm:text-sm md:text-base text-[#A8B5C5] leading-relaxed"
           style={{ textWrap: 'balance' }}
         >
           {subtitle}

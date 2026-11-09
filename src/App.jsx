@@ -58,7 +58,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#06111F] text-[#F5F7FA] font-sans antialiased selection:bg-[#168BFF]/30 selection:text-[#29B6F6]">
+    <div className="min-h-screen w-full overflow-x-hidden bg-[#06111F] text-[#F5F7FA] font-sans antialiased selection:bg-[#168BFF]/30 selection:text-[#29B6F6]">
       {/* Sticky Navigation Bar */}
       <Navbar
         onOpenCV={() => setIsCVModalOpen(true)}
@@ -68,7 +68,7 @@ export default function App() {
       />
 
       {/* Main Content Sections */}
-      <main className="relative">
+      <main className="relative w-full overflow-x-hidden">
         <Hero
           onOpenCV={() => setIsCVModalOpen(true)}
           onOpenProjects={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
@@ -118,7 +118,7 @@ export default function App() {
 
       {/* Toast Notice for Project Links or Live Demos */}
       {actionNotice && (
-        <div className="fixed bottom-6 right-6 z-50 max-w-sm p-4 rounded-xl bg-[#0D1E30] border border-[#168BFF] shadow-[0_0_25px_rgba(22,139,255,0.4)] text-xs text-[#F5F7FA] animate-bounce-short">
+        <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 left-4 sm:left-auto sm:max-w-sm z-50 p-4 rounded-xl bg-[#0D1E30] border border-[#168BFF] shadow-[0_0_25px_rgba(22,139,255,0.4)] text-xs text-[#F5F7FA]">
           <div className="font-semibold text-[#29B6F6] mb-1">
             {actionNotice.type === 'demo' ? 'Live Demo Notice' : 'Source Code Notice'}
           </div>

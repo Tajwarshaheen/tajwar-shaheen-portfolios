@@ -30,21 +30,21 @@ export default function ServiceCard({ service, index, onInquire }) {
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.45, delay: (index % 3) * 0.1 }}
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
-      className="group relative flex flex-col justify-between h-full p-6 sm:p-7 rounded-2xl bg-[#0D1E30] border border-[#18344D] hover:border-[#168BFF] transition-all duration-300 hover:shadow-[0_0_30px_-5px_rgba(22,139,255,0.25)]"
+      className="group relative flex flex-col justify-between h-full p-5 sm:p-7 rounded-xl sm:rounded-2xl bg-[#0D1E30] border border-[#18344D] hover:border-[#168BFF] transition-all duration-300 hover:shadow-[0_0_30px_-5px_rgba(22,139,255,0.25)]"
     >
       <div>
-        <div className="flex items-center justify-between mb-5">
-          <div className="w-12 h-12 rounded-xl bg-[#0A1929] border border-[#18344D] group-hover:border-[#29B6F6] flex items-center justify-center text-[#168BFF] group-hover:text-[#29B6F6] group-hover:bg-[#168BFF]/10 transition-all duration-300">
-            <IconComponent className="w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
+        <div className="flex items-center justify-between mb-4 sm:mb-5">
+          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#0A1929] border border-[#18344D] group-hover:border-[#29B6F6] flex items-center justify-center text-[#168BFF] group-hover:text-[#29B6F6] group-hover:bg-[#168BFF]/10 transition-all duration-300 shrink-0">
+            <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300 group-hover:scale-110" />
           </div>
           <span className="text-xs font-mono text-[#A8B5C5]/60">0{index + 1}</span>
         </div>
 
-        <h3 className="text-lg sm:text-xl font-bold text-[#F5F7FA] group-hover:text-[#29B6F6] transition-colors duration-200">
+        <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#F5F7FA] group-hover:text-[#29B6F6] transition-colors duration-200">
           {service.title}
         </h3>
 
-        <p className="mt-2.5 text-sm text-[#A8B5C5] leading-relaxed">
+        <p className="mt-2 sm:mt-2.5 text-xs sm:text-sm text-[#A8B5C5] leading-relaxed">
           {service.description}
         </p>
 

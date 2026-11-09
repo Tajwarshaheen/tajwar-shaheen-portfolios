@@ -14,8 +14,8 @@ export default function Projects({ onOpenDetails, onActionNotice }) {
       : projectsData.filter((p) => p.filterTag === activeFilter);
 
   return (
-    <section id="projects" className="py-20 lg:py-28 bg-[#06111F] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="projects" className="py-14 sm:py-20 lg:py-28 bg-[#06111F] relative w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           kicker="Portfolio & Case Studies"
           title="Featured Projects"
@@ -24,14 +24,14 @@ export default function Projects({ onOpenDetails, onActionNotice }) {
         />
 
         {/* Filter controls */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-8 sm:mb-12">
           {filterTabs.map((tab) => {
             const isActive = activeFilter === tab;
             return (
               <button
                 key={tab}
                 onClick={() => setActiveFilter(tab)}
-                className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200 cursor-pointer ${
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-semibold transition-all duration-200 cursor-pointer ${
                   isActive
                     ? 'bg-[#168BFF] text-white shadow-[0_0_20px_rgba(22,139,255,0.4)]'
                     : 'bg-[#0D1E30] text-[#A8B5C5] hover:text-[#F5F7FA] border border-[#18344D] hover:border-[#168BFF]'
@@ -44,7 +44,7 @@ export default function Projects({ onOpenDetails, onActionNotice }) {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
           {filteredProjects.map((project) => (
             <ProjectCard
               key={project.id}

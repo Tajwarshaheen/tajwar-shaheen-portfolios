@@ -115,10 +115,10 @@ export default function CustomizationGuideModal({ isOpen, onClose }) {
       content: (
         <div className="space-y-2 text-xs text-[#A8B5C5]">
           <p>
-            Drop your PDF file into the <code className="text-[#F5F7FA] font-mono">public/</code> directory and name it <code className="text-[#29B6F6] font-mono">Tajwar_Shaheen_CV.pdf</code>.
+            Drop your PDF file into the <code className="text-[#F5F7FA] font-mono">public/</code> directory and name it <code className="text-[#29B6F6] font-mono">Tajwar_CV.pdf</code>.
           </p>
           <p>
-            Users can also preview and print your full credentials directly using the interactive Resume modal.
+            Users can also preview and download your official graphic CV PDF directly using the Download CV buttons.
           </p>
         </div>
       ),
@@ -145,7 +145,7 @@ export default function CustomizationGuideModal({ isOpen, onClose }) {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto bg-[#06111F]/85 backdrop-blur-md">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-2.5 xs:p-3 sm:p-6 overflow-y-auto bg-[#06111F]/85 backdrop-blur-md">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -159,39 +159,39 @@ export default function CustomizationGuideModal({ isOpen, onClose }) {
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.95, opacity: 0, y: 20 }}
           transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-          className="relative w-full max-w-3xl max-h-[88vh] flex flex-col overflow-hidden rounded-2xl bg-[#0D1E30] border border-[#18344D] shadow-[0_0_50px_rgba(22,139,255,0.25)] z-10"
+          className="relative w-full max-w-3xl max-h-[90vh] flex flex-col overflow-hidden rounded-2xl bg-[#0D1E30] border border-[#18344D] shadow-[0_0_50px_rgba(22,139,255,0.25)] z-10"
         >
           {/* Header */}
-          <div className="flex items-center justify-between p-5 border-b border-[#18344D] bg-[#0A1929]">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-[#168BFF]/10 border border-[#168BFF] flex items-center justify-center text-[#29B6F6]">
-                <Code2 className="w-5 h-5" />
+          <div className="flex items-center justify-between p-3.5 sm:p-5 border-b border-[#18344D] bg-[#0A1929] shrink-0">
+            <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#168BFF]/10 border border-[#168BFF] flex items-center justify-center text-[#29B6F6] shrink-0">
+                <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
-              <div>
-                <h3 className="text-base font-bold text-[#F5F7FA]">Portfolio Customization & Deployment Guide</h3>
-                <p className="text-xs text-[#A8B5C5]">Complete instructions for VS Code, images, links, projects & hosting</p>
+              <div className="min-w-0">
+                <h3 className="text-sm sm:text-base font-bold text-[#F5F7FA] truncate">Portfolio Setup & Customization Guide</h3>
+                <p className="text-[11px] sm:text-xs text-[#A8B5C5] truncate">VS Code, images, links, projects & deployment</p>
               </div>
             </div>
 
             <button
               onClick={onClose}
-              className="p-1.5 rounded-lg text-[#A8B5C5] hover:text-[#F5F7FA] hover:bg-[#18344D] transition-colors"
+              className="p-1.5 rounded-lg text-[#A8B5C5] hover:text-[#F5F7FA] hover:bg-[#18344D] transition-colors shrink-0"
             >
               <X className="w-5 h-5" />
             </button>
           </div>
 
           {/* Body */}
-          <div className="flex-1 overflow-y-auto p-6 space-y-5">
+          <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 sm:space-y-5">
             {steps.map((step) => {
               const IconComp = step.icon;
               return (
                 <div
                   key={step.id}
-                  className="p-4 sm:p-5 rounded-xl bg-[#0A1929] border border-[#18344D] space-y-3"
+                  className="p-3.5 sm:p-5 rounded-xl bg-[#0A1929] border border-[#18344D] space-y-2.5 sm:space-y-3"
                 >
-                  <div className="flex items-center gap-2.5 text-[#F5F7FA] font-semibold text-sm">
-                    <IconComp className="w-4 h-4 text-[#29B6F6]" />
+                  <div className="flex items-center gap-2 text-[#F5F7FA] font-semibold text-xs sm:text-sm">
+                    <IconComp className="w-4 h-4 text-[#29B6F6] shrink-0" />
                     <span>{step.title}</span>
                   </div>
                   {step.content}
@@ -201,10 +201,10 @@ export default function CustomizationGuideModal({ isOpen, onClose }) {
           </div>
 
           {/* Footer */}
-          <div className="p-4 border-t border-[#18344D] bg-[#0A1929] flex justify-end">
+          <div className="p-3.5 sm:p-4 border-t border-[#18344D] bg-[#0A1929] flex justify-end shrink-0">
             <button
               onClick={onClose}
-              className="px-5 py-2 rounded-lg bg-[#168BFF] hover:bg-[#29B6F6] text-white text-xs font-semibold shadow-[0_0_15px_rgba(22,139,255,0.4)] transition-all"
+              className="w-full sm:w-auto px-5 py-2.5 sm:py-2 rounded-lg bg-[#168BFF] hover:bg-[#29B6F6] text-white text-xs font-semibold shadow-[0_0_15px_rgba(22,139,255,0.4)] transition-all text-center"
             >
               Got it, Close Guide
             </button>
