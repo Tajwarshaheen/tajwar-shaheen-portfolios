@@ -13,7 +13,7 @@ export const personalInfo = {
   education: "Matric",
   email: "wazirsaqlain1011@gmail.com",
   phone: "+92 3485617282",
-  whatsappNumber: "+923485612782",
+  whatsappNumber: "+923485617282",
   availability: "Available for freelance projects & career opportunities",
   experienceYears: "2+ Years Learning & Building",
   completedProjectsCount: "10+",
@@ -59,7 +59,7 @@ export const socialLinks = [
   },
   {
     name: "WhatsApp",
-    url: "https://wa.me/923485612782?text=Hello%20Tajwar%21%20I%20visited%20your%20portfolio%20website%20and%20would%20like%20to%20connect.",
+    url: "https://wa.me/923485617282",
     icon: "WhatsApp",
     label: "+92 3485617282",
   },

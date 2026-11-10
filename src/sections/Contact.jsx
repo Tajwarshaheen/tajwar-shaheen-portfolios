@@ -156,7 +156,7 @@ export default function Contact({ prefilledSubject = '' }) {
 
               {/* WhatsApp */}
               <a
-                href={`https://wa.me/${personalInfo.whatsappNumber.replace(/[^0-9]/g, '')}`}
+                href="https://wa.me/923485617282"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-[#0D1E30] border border-[#18344D] hover:border-[#29B6F6] transition-all duration-300 hover:shadow-[0_0_20px_-5px_rgba(41,182,246,0.3)]"
