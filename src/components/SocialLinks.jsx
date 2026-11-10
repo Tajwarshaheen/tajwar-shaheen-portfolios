@@ -51,13 +51,18 @@ export default function SocialLinks({ links, variant = 'icons-only', className =
           item.icon?.toLowerCase() === 'whatsapp';
         const IconComponent = iconMap[item.icon] || (isWhatsApp ? WhatsAppIcon : ExternalLink);
 
+        const isLinkedIn =
+          item.name?.toLowerCase() === 'linkedin' ||
+          item.icon?.toLowerCase() === 'linkedin';
+        const isLinkedInColor = isLinkedIn || isWhatsApp;
+
         const buttonClasses =
           variant === 'with-label'
-            ? isWhatsApp
-              ? 'px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-lg bg-[#0D1E30] border border-[#18344D] hover:border-[#25D366] text-xs sm:text-sm text-[#A8B5C5] hover:text-[#25D366] hover:bg-[#0A1929] gap-1.5 sm:gap-2 hover:shadow-[0_0_15px_-3px_rgba(37,211,102,0.35)]'
+            ? isLinkedInColor
+              ? 'px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-lg bg-[#0D1E30] border border-[#18344D] hover:border-[#0A66C2] text-xs sm:text-sm text-[#A8B5C5] hover:text-[#0A66C2] hover:bg-[#0A1929] gap-1.5 sm:gap-2 hover:shadow-[0_0_15px_-3px_rgba(10,102,194,0.4)]'
               : 'px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-lg bg-[#0D1E30] border border-[#18344D] hover:border-[#168BFF] text-xs sm:text-sm text-[#A8B5C5] hover:text-[#F5F7FA] gap-1.5 sm:gap-2 hover:shadow-[0_0_15px_-3px_rgba(22,139,255,0.3)]'
-            : isWhatsApp
-              ? 'w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#0D1E30] border border-[#18344D] hover:border-[#25D366] text-[#A8B5C5] hover:text-[#25D366] hover:bg-[#0A1929] hover:shadow-[0_0_20px_-3px_rgba(37,211,102,0.35)] shrink-0'
+            : isLinkedInColor
+              ? 'w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#0D1E30] border border-[#18344D] hover:border-[#0A66C2] text-[#A8B5C5] hover:text-[#0A66C2] hover:bg-[#0A1929] hover:shadow-[0_0_20px_-3px_rgba(10,102,194,0.4)] shrink-0'
               : 'w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#0D1E30] border border-[#18344D] hover:border-[#29B6F6] text-[#A8B5C5] hover:text-[#29B6F6] hover:bg-[#0A1929] hover:shadow-[0_0_20px_-3px_rgba(41,182,246,0.35)] shrink-0';
 
         return (
