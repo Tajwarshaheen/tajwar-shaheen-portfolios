@@ -5,7 +5,7 @@ import { servicesData } from '../data/portfolioData';
 
 export default function Services({ onSelectService }) {
   return (
-    <section id="services" className="py-14 sm:py-20 lg:py-28 bg-[#06111F] relative w-full overflow-hidden">
+    <section id="services" className="py-14 sm:py-20 lg:py-28 bg-[#F8FAFC] dark:bg-[#06111F] relative w-full overflow-hidden transition-colors">
       <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           kicker="Solutions & Offerings"
@@ -27,12 +27,12 @@ export default function Services({ onSelectService }) {
         </div>
 
         {/* Bottom Banner */}
-        <div className="mt-12 sm:mt-16 p-5 sm:p-8 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#0D1E30] via-[#0A1929] to-[#0D1E30] border border-[#18344D] flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6 text-center sm:text-left">
+        <div className="mt-12 sm:mt-16 p-5 sm:p-8 rounded-xl sm:rounded-2xl bg-gradient-to-r from-white via-[#F1F5F9] to-white dark:from-[#0D1E30] dark:via-[#0A1929] dark:to-[#0D1E30] border border-[#E2E8F0] dark:border-[#18344D] shadow-sm dark:shadow-none flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6 text-center sm:text-left transition-colors">
           <div className="space-y-1">
-            <h3 className="text-base sm:text-lg font-bold text-[#F5F7FA]">
+            <h3 className="text-base sm:text-lg font-bold text-[#0F172A] dark:text-[#F5F7FA] transition-colors">
               Need a tailored web solution for your brand?
             </h3>
-            <p className="text-xs sm:text-sm text-[#A8B5C5]">
+            <p className="text-xs sm:text-sm text-[#475569] dark:text-[#A8B5C5] transition-colors">
               Let's discuss your project requirements, timeline, and goals.
             </p>
           </div>

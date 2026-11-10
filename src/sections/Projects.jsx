@@ -14,7 +14,7 @@ export default function Projects({ onOpenDetails, onActionNotice }) {
       : projectsData.filter((p) => p.filterTag === activeFilter);
 
   return (
-    <section id="projects" className="py-14 sm:py-20 lg:py-28 bg-[#06111F] relative w-full overflow-hidden">
+    <section id="projects" className="py-14 sm:py-20 lg:py-28 bg-[#F8FAFC] dark:bg-[#06111F] relative w-full overflow-hidden transition-colors">
       <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           kicker="Portfolio & Case Studies"
@@ -33,8 +33,8 @@ export default function Projects({ onOpenDetails, onActionNotice }) {
                 onClick={() => setActiveFilter(tab)}
                 className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-semibold transition-all duration-200 cursor-pointer ${
                   isActive
-                    ? 'bg-[#168BFF] text-white shadow-[0_0_20px_rgba(22,139,255,0.4)]'
-                    : 'bg-[#0D1E30] text-[#A8B5C5] hover:text-[#F5F7FA] border border-[#18344D] hover:border-[#168BFF]'
+                    ? 'bg-[#168BFF] text-white shadow-md'
+                    : 'bg-white dark:bg-[#0D1E30] text-[#475569] dark:text-[#A8B5C5] hover:text-[#0F172A] dark:hover:text-[#F5F7FA] border border-[#E2E8F0] dark:border-[#18344D] hover:border-[#168BFF]'
                 }`}
               >
                 {tab}
@@ -56,7 +56,7 @@ export default function Projects({ onOpenDetails, onActionNotice }) {
         </div>
 
         {/* Project note */}
-        <div className="mt-12 p-4 rounded-xl bg-[#0D1E30]/60 border border-[#18344D] text-center text-xs text-[#A8B5C5]">
+        <div className="mt-12 p-4 rounded-xl bg-white/80 dark:bg-[#0D1E30]/60 border border-[#E2E8F0] dark:border-[#18344D] shadow-sm dark:shadow-none text-center text-xs text-[#475569] dark:text-[#A8B5C5] transition-colors">
           <span>
             Looking for something specific or want to collaborate on a new project?{' '}
             <a
@@ -65,7 +65,7 @@ export default function Projects({ onOpenDetails, onActionNotice }) {
                 e.preventDefault();
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="text-[#29B6F6] font-medium hover:underline"
+              className="text-[#168BFF] dark:text-[#29B6F6] font-medium hover:underline"
             >
               Get in touch directly
             </a>

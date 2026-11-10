@@ -3,12 +3,23 @@
 
 @layer base {
   :root {
+    --bg-main: #F8FAFC;
+    --bg-secondary: #F1F5F9;
+    --bg-card: #FFFFFF;
+    --primary-blue: #168BFF;
+    --accent-blue: #29B6F6;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --border-color: #E2E8F0;
+  }
+
+  .dark {
     --bg-main: #06111F;
     --bg-secondary: #0A1929;
     --bg-card: #0D1E30;
     --primary-blue: #168BFF;
     --accent-blue: #29B6F6;
-    --text-white: #F5F7FA;
+    --text-primary: #F5F7FA;
     --text-secondary: #A8B5C5;
     --border-color: #18344D;
   }
@@ -22,14 +33,13 @@
 
   body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #06111F;
-    color: #F5F7FA;
     overflow-x: hidden;
     width: 100%;
     max-width: 100vw;
     position: relative;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -49,11 +59,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #06111F;
+  background: var(--bg-main);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #18344D;
+  background: var(--border-color);
   border-radius: 4px;
 }
 
@@ -71,7 +81,7 @@
 }
 
 .subtle-border {
-  border: 1px solid #18344D;
+  border: 1px solid var(--border-color);
 }
 
 .subtle-border-hover:hover {
@@ -79,6 +89,12 @@
 }
 
 .gradient-text-blue {
+  background: linear-gradient(135deg, #0F172A 20%, #168BFF 80%, #29B6F6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .gradient-text-blue {
   background: linear-gradient(135deg, #F5F7FA 20%, #29B6F6 80%, #168BFF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -89,5 +105,9 @@
 }
 
 .card-gradient {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+}
+
+.dark .card-gradient {
   background: linear-gradient(180deg, #0D1E30 0%, #0A1929 100%);
 }

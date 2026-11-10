@@ -7,9 +7,6 @@ import {
   MapPin,
   CheckCircle,
   AlertCircle,
-  ExternalLink,
-  Phone,
-  Sparkles,
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import SectionHeading from '../components/SectionHeading';
@@ -111,7 +108,7 @@ export default function Contact({ prefilledSubject = '' }) {
   };
 
   return (
-    <section id="contact" className="py-14 sm:py-20 lg:py-28 bg-[#06111F] relative w-full overflow-hidden">
+    <section id="contact" className="py-14 sm:py-20 lg:py-28 bg-[#F8FAFC] dark:bg-[#06111F] relative w-full overflow-hidden transition-colors">
       <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           kicker="Get In Touch"
@@ -130,8 +127,8 @@ export default function Contact({ prefilledSubject = '' }) {
             className="lg:col-span-5 space-y-6 sm:space-y-8"
           >
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#F5F7FA]">Contact Me</h3>
-              <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-[#A8B5C5] leading-relaxed">
+              <h3 className="text-xl sm:text-2xl font-bold text-[#0F172A] dark:text-[#F5F7FA] transition-colors">Contact Me</h3>
+              <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-[#475569] dark:text-[#A8B5C5] leading-relaxed transition-colors">
                 I am actively seeking professional opportunities, freelance collaborations, and brand partnerships. Send me an email, reach out via WhatsApp, or connect on social media.
               </p>
             </div>
@@ -141,14 +138,14 @@ export default function Contact({ prefilledSubject = '' }) {
               {/* Email */}
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="group flex items-center gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-[#0D1E30] border border-[#18344D] hover:border-[#168BFF] transition-all duration-300 hover:shadow-[0_0_20px_-5px_rgba(22,139,255,0.3)]"
+                className="group flex items-center gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#0D1E30] border border-[#E2E8F0] dark:border-[#18344D] hover:border-[#168BFF] transition-all duration-300 shadow-sm dark:shadow-none hover:shadow-[0_4px_20px_-5px_rgba(22,139,255,0.25)]"
               >
-                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#0A1929] border border-[#18344D] flex items-center justify-center text-[#29B6F6] group-hover:scale-105 transition-transform shrink-0">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#F1F5F9] dark:bg-[#0A1929] border border-[#E2E8F0] dark:border-[#18344D] flex items-center justify-center text-[#168BFF] dark:text-[#29B6F6] group-hover:scale-105 transition-transform shrink-0">
                   <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="text-[11px] sm:text-xs text-[#A8B5C5]">Email Me Directly</p>
-                  <p className="text-xs sm:text-sm font-semibold text-[#F5F7FA] group-hover:text-[#29B6F6] truncate transition-colors">
+                  <p className="text-[11px] sm:text-xs text-[#64748B] dark:text-[#A8B5C5]">Email Me Directly</p>
+                  <p className="text-xs sm:text-sm font-semibold text-[#0F172A] dark:text-[#F5F7FA] group-hover:text-[#168BFF] dark:group-hover:text-[#29B6F6] truncate transition-colors">
                     {personalInfo.email}
                   </p>
                 </div>
@@ -159,34 +156,34 @@ export default function Contact({ prefilledSubject = '' }) {
                 href="https://wa.me/923485617282"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-[#0D1E30] border border-[#18344D] hover:border-[#29B6F6] transition-all duration-300 hover:shadow-[0_0_20px_-5px_rgba(41,182,246,0.3)]"
+                className="group flex items-center gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#0D1E30] border border-[#E2E8F0] dark:border-[#18344D] hover:border-[#29B6F6] transition-all duration-300 shadow-sm dark:shadow-none hover:shadow-[0_4px_20px_-5px_rgba(41,182,246,0.25)]"
               >
-                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#0A1929] border border-[#18344D] flex items-center justify-center text-[#29B6F6] group-hover:scale-105 transition-transform shrink-0">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#F1F5F9] dark:bg-[#0A1929] border border-[#E2E8F0] dark:border-[#18344D] flex items-center justify-center text-[#168BFF] dark:text-[#29B6F6] group-hover:scale-105 transition-transform shrink-0">
                   <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="text-[11px] sm:text-xs text-[#A8B5C5]">WhatsApp Quick Chat</p>
-                  <p className="text-xs sm:text-sm font-semibold text-[#F5F7FA] group-hover:text-[#29B6F6] truncate transition-colors">
+                  <p className="text-[11px] sm:text-xs text-[#64748B] dark:text-[#A8B5C5]">WhatsApp Quick Chat</p>
+                  <p className="text-xs sm:text-sm font-semibold text-[#0F172A] dark:text-[#F5F7FA] group-hover:text-[#168BFF] dark:group-hover:text-[#29B6F6] truncate transition-colors">
                     {personalInfo.phone}
                   </p>
                 </div>
               </a>
 
               {/* Location */}
-              <div className="flex items-center gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-[#0D1E30] border border-[#18344D]">
-                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#0A1929] border border-[#18344D] flex items-center justify-center text-[#168BFF] shrink-0">
+              <div className="flex items-center gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#0D1E30] border border-[#E2E8F0] dark:border-[#18344D] shadow-sm dark:shadow-none transition-colors">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#F1F5F9] dark:bg-[#0A1929] border border-[#E2E8F0] dark:border-[#18344D] flex items-center justify-center text-[#168BFF] shrink-0">
                   <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="text-[11px] sm:text-xs text-[#A8B5C5]">Location</p>
-                  <p className="text-xs sm:text-sm font-semibold text-[#F5F7FA] truncate">{personalInfo.location}</p>
+                  <p className="text-[11px] sm:text-xs text-[#64748B] dark:text-[#A8B5C5]">Location</p>
+                  <p className="text-xs sm:text-sm font-semibold text-[#0F172A] dark:text-[#F5F7FA] truncate transition-colors">{personalInfo.location}</p>
                 </div>
               </div>
             </div>
 
             {/* Social media connections */}
             <div>
-              <h4 className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-[#29B6F6] mb-2.5 sm:mb-3">
+              <h4 className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-[#168BFF] dark:text-[#29B6F6] mb-2.5 sm:mb-3">
                 Social Profiles & Networks
               </h4>
               <SocialLinks links={socialLinks} variant="with-label" />
@@ -201,25 +198,25 @@ export default function Contact({ prefilledSubject = '' }) {
             transition={{ duration: 0.55 }}
             className="lg:col-span-7 w-full"
           >
-            <div className="p-4 xs:p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#0D1E30] border border-[#18344D] shadow-[0_0_35px_-5px_rgba(22,139,255,0.2)]">
+            <div className="p-4 xs:p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white dark:bg-[#0D1E30] border border-[#E2E8F0] dark:border-[#18344D] shadow-sm dark:shadow-[0_0_35px_-5px_rgba(22,139,255,0.2)] transition-colors">
               {/* Form header */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 sm:pb-6 border-b border-[#18344D]">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 sm:pb-6 border-b border-[#E2E8F0] dark:border-[#18344D] transition-colors">
                 <div>
-                  <h4 className="text-base sm:text-lg font-bold text-[#F5F7FA]">Send a Direct Message</h4>
-                  <p className="text-xs text-[#A8B5C5]">
+                  <h4 className="text-base sm:text-lg font-bold text-[#0F172A] dark:text-[#F5F7FA] transition-colors">Send a Direct Message</h4>
+                  <p className="text-xs text-[#475569] dark:text-[#A8B5C5] transition-colors">
                     Fill out the fields below to initiate your inquiry.
                   </p>
                 </div>
 
                 {/* Workflow picker */}
-                <div className="flex items-center gap-1.5 p-1 rounded-lg bg-[#0A1929] border border-[#18344D] text-xs self-start sm:self-auto">
+                <div className="flex items-center gap-1.5 p-1 rounded-lg bg-[#F1F5F9] dark:bg-[#0A1929] border border-[#E2E8F0] dark:border-[#18344D] text-xs self-start sm:self-auto transition-colors">
                   <button
                     type="button"
                     onClick={() => setMethodPreference('email')}
-                    className={`px-2.5 py-1 rounded-md transition-colors ${
+                    className={`px-2.5 py-1 rounded-md transition-colors cursor-pointer ${
                       methodPreference === 'email'
                         ? 'bg-[#168BFF] text-white font-medium'
-                        : 'text-[#A8B5C5] hover:text-[#F5F7FA]'
+                        : 'text-[#475569] dark:text-[#A8B5C5] hover:text-[#0F172A] dark:hover:text-[#F5F7FA]'
                     }`}
                   >
                     Email
@@ -227,10 +224,10 @@ export default function Contact({ prefilledSubject = '' }) {
                   <button
                     type="button"
                     onClick={() => setMethodPreference('whatsapp')}
-                    className={`px-2.5 py-1 rounded-md transition-colors ${
+                    className={`px-2.5 py-1 rounded-md transition-colors cursor-pointer ${
                       methodPreference === 'whatsapp'
                         ? 'bg-[#29B6F6] text-slate-950 font-semibold'
-                        : 'text-[#A8B5C5] hover:text-[#F5F7FA]'
+                        : 'text-[#475569] dark:text-[#A8B5C5] hover:text-[#0F172A] dark:hover:text-[#F5F7FA]'
                     }`}
                   >
                     WhatsApp
@@ -245,16 +242,16 @@ export default function Contact({ prefilledSubject = '' }) {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="mt-4 p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/40 text-emerald-300 text-xs flex items-start gap-3"
+                    className="mt-4 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-500/40 text-emerald-800 dark:text-emerald-300 text-xs flex items-start gap-3"
                   >
-                    <CheckCircle className="w-5 h-5 shrink-0 text-emerald-400 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 shrink-0 text-emerald-600 dark:text-emerald-400 mt-0.5" />
                     <div>
-                      <p className="font-semibold text-emerald-200">
+                      <p className="font-semibold text-emerald-900 dark:text-emerald-200">
                         {methodPreference === 'whatsapp'
                           ? 'Opening your message in WhatsApp...'
                           : 'Opening your default mail client with prefilled details...'}
                       </p>
-                      <p className="mt-1 text-emerald-300/80">
+                      <p className="mt-1 text-emerald-700 dark:text-emerald-300/80">
                         Message prepared directly for <strong>{personalInfo.email}</strong>. If your mail client did not open automatically, click above to send directly.
                       </p>
                     </div>
@@ -266,12 +263,12 @@ export default function Contact({ prefilledSubject = '' }) {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="mt-4 p-4 rounded-xl bg-rose-950/40 border border-rose-500/40 text-rose-300 text-xs flex items-start gap-3"
+                    className="mt-4 p-4 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-300 dark:border-rose-500/40 text-rose-800 dark:text-rose-300 text-xs flex items-start gap-3"
                   >
-                    <AlertCircle className="w-5 h-5 shrink-0 text-rose-400 mt-0.5" />
+                    <AlertCircle className="w-5 h-5 shrink-0 text-rose-600 dark:text-rose-400 mt-0.5" />
                     <div>
-                      <p className="font-semibold text-rose-200">Please review highlighted form errors</p>
-                      <p className="mt-0.5 text-rose-300/80">
+                      <p className="font-semibold text-rose-900 dark:text-rose-200">Please review highlighted form errors</p>
+                      <p className="mt-0.5 text-rose-700 dark:text-rose-300/80">
                         Ensure all required fields are filled out accurately before sending.
                       </p>
                     </div>
@@ -286,9 +283,9 @@ export default function Contact({ prefilledSubject = '' }) {
                   <div>
                     <label
                       htmlFor="fullName"
-                      className="block text-xs font-semibold uppercase tracking-wider text-[#A8B5C5] mb-1.5 sm:mb-2"
+                      className="block text-xs font-semibold uppercase tracking-wider text-[#475569] dark:text-[#A8B5C5] mb-1.5 sm:mb-2 transition-colors"
                     >
-                      Full Name <span className="text-[#29B6F6]">*</span>
+                      Full Name <span className="text-[#168BFF] dark:text-[#29B6F6]">*</span>
                     </label>
                     <input
                       type="text"
@@ -297,14 +294,14 @@ export default function Contact({ prefilledSubject = '' }) {
                       value={formData.fullName}
                       onChange={handleChange}
                       placeholder="e.g. John Doe"
-                      className={`w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#0A1929] border text-xs sm:text-sm text-[#F5F7FA] placeholder-[#A8B5C5]/40 focus:outline-none transition-colors ${
+                      className={`w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#F8FAFC] dark:bg-[#0A1929] border text-xs sm:text-sm text-[#0F172A] dark:text-[#F5F7FA] placeholder-[#94A3B8] dark:placeholder-[#A8B5C5]/40 focus:outline-none transition-colors ${
                         errors.fullName
                           ? 'border-rose-500 focus:border-rose-400'
-                          : 'border-[#18344D] focus:border-[#168BFF]'
+                          : 'border-[#CBD5E1] dark:border-[#18344D] focus:border-[#168BFF]'
                       }`}
                     />
                     {errors.fullName && (
-                      <p className="mt-1 text-xs text-rose-400">{errors.fullName}</p>
+                      <p className="mt-1 text-xs text-rose-500">{errors.fullName}</p>
                     )}
                   </div>
 
@@ -312,9 +309,9 @@ export default function Contact({ prefilledSubject = '' }) {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-xs font-semibold uppercase tracking-wider text-[#A8B5C5] mb-1.5 sm:mb-2"
+                      className="block text-xs font-semibold uppercase tracking-wider text-[#475569] dark:text-[#A8B5C5] mb-1.5 sm:mb-2 transition-colors"
                     >
-                      Email Address <span className="text-[#29B6F6]">*</span>
+                      Email Address <span className="text-[#168BFF] dark:text-[#29B6F6]">*</span>
                     </label>
                     <input
                       type="email"
@@ -323,14 +320,14 @@ export default function Contact({ prefilledSubject = '' }) {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="e.g. client@company.com"
-                      className={`w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#0A1929] border text-xs sm:text-sm text-[#F5F7FA] placeholder-[#A8B5C5]/40 focus:outline-none transition-colors ${
+                      className={`w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#F8FAFC] dark:bg-[#0A1929] border text-xs sm:text-sm text-[#0F172A] dark:text-[#F5F7FA] placeholder-[#94A3B8] dark:placeholder-[#A8B5C5]/40 focus:outline-none transition-colors ${
                         errors.email
                           ? 'border-rose-500 focus:border-rose-400'
-                          : 'border-[#18344D] focus:border-[#168BFF]'
+                          : 'border-[#CBD5E1] dark:border-[#18344D] focus:border-[#168BFF]'
                       }`}
                     />
                     {errors.email && (
-                      <p className="mt-1 text-xs text-rose-400">{errors.email}</p>
+                      <p className="mt-1 text-xs text-rose-500">{errors.email}</p>
                     )}
                   </div>
                 </div>
@@ -339,9 +336,9 @@ export default function Contact({ prefilledSubject = '' }) {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-xs font-semibold uppercase tracking-wider text-[#A8B5C5] mb-1.5 sm:mb-2"
+                    className="block text-xs font-semibold uppercase tracking-wider text-[#475569] dark:text-[#A8B5C5] mb-1.5 sm:mb-2 transition-colors"
                   >
-                    Subject <span className="text-[#29B6F6]">*</span>
+                    Subject <span className="text-[#168BFF] dark:text-[#29B6F6]">*</span>
                   </label>
                   <input
                     type="text"
@@ -350,14 +347,14 @@ export default function Contact({ prefilledSubject = '' }) {
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="e.g. Project Inquiry / Web Development"
-                    className={`w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#0A1929] border text-xs sm:text-sm text-[#F5F7FA] placeholder-[#A8B5C5]/40 focus:outline-none transition-colors ${
+                    className={`w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#F8FAFC] dark:bg-[#0A1929] border text-xs sm:text-sm text-[#0F172A] dark:text-[#F5F7FA] placeholder-[#94A3B8] dark:placeholder-[#A8B5C5]/40 focus:outline-none transition-colors ${
                       errors.subject
                         ? 'border-rose-500 focus:border-rose-400'
-                        : 'border-[#18344D] focus:border-[#168BFF]'
+                        : 'border-[#CBD5E1] dark:border-[#18344D] focus:border-[#168BFF]'
                     }`}
                   />
                   {errors.subject && (
-                    <p className="mt-1 text-xs text-rose-400">{errors.subject}</p>
+                    <p className="mt-1 text-xs text-rose-500">{errors.subject}</p>
                   )}
                 </div>
 
@@ -365,9 +362,9 @@ export default function Contact({ prefilledSubject = '' }) {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-xs font-semibold uppercase tracking-wider text-[#A8B5C5] mb-1.5 sm:mb-2"
+                    className="block text-xs font-semibold uppercase tracking-wider text-[#475569] dark:text-[#A8B5C5] mb-1.5 sm:mb-2 transition-colors"
                   >
-                    Your Message <span className="text-[#29B6F6]">*</span>
+                    Your Message <span className="text-[#168BFF] dark:text-[#29B6F6]">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -376,19 +373,19 @@ export default function Contact({ prefilledSubject = '' }) {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell me about your brand, project timeline, and specific goals..."
-                    className={`w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#0A1929] border text-xs sm:text-sm text-[#F5F7FA] placeholder-[#A8B5C5]/40 focus:outline-none transition-colors resize-y ${
+                    className={`w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#F8FAFC] dark:bg-[#0A1929] border text-xs sm:text-sm text-[#0F172A] dark:text-[#F5F7FA] placeholder-[#94A3B8] dark:placeholder-[#A8B5C5]/40 focus:outline-none transition-colors resize-y ${
                       errors.message
                         ? 'border-rose-500 focus:border-rose-400'
-                        : 'border-[#18344D] focus:border-[#168BFF]'
+                        : 'border-[#CBD5E1] dark:border-[#18344D] focus:border-[#168BFF]'
                     }`}
                   />
                   {errors.message && (
-                    <p className="mt-1 text-xs text-rose-400">{errors.message}</p>
+                    <p className="mt-1 text-xs text-rose-500">{errors.message}</p>
                   )}
                 </div>
 
                 {/* Notice regarding backend delivery honesty */}
-                <p className="text-[11px] text-[#A8B5C5]/70 italic">
+                <p className="text-[11px] text-[#64748B] dark:text-[#A8B5C5]/70 italic transition-colors">
                   Note: Clicking send prepares your message directly in {methodPreference === 'whatsapp' ? 'WhatsApp' : 'your mail application'} addressed to {personalInfo.email}.
                 </p>
 

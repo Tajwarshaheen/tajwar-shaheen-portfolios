@@ -59,11 +59,11 @@ export default function SocialLinks({ links, variant = 'icons-only', className =
         const buttonClasses =
           variant === 'with-label'
             ? isLinkedInColor
-              ? 'px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-lg bg-[#0D1E30] border border-[#18344D] hover:border-[#0A66C2] text-xs sm:text-sm text-[#A8B5C5] hover:text-[#0A66C2] hover:bg-[#0A1929] gap-1.5 sm:gap-2 hover:shadow-[0_0_15px_-3px_rgba(10,102,194,0.4)]'
-              : 'px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-lg bg-[#0D1E30] border border-[#18344D] hover:border-[#168BFF] text-xs sm:text-sm text-[#A8B5C5] hover:text-[#F5F7FA] gap-1.5 sm:gap-2 hover:shadow-[0_0_15px_-3px_rgba(22,139,255,0.3)]'
+              ? 'px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-lg bg-white dark:bg-[#0D1E30] border border-[#E2E8F0] dark:border-[#18344D] hover:border-[#0A66C2] text-xs sm:text-sm text-[#475569] dark:text-[#A8B5C5] hover:text-[#0A66C2] hover:bg-[#F1F5F9] dark:hover:bg-[#0A1929] gap-1.5 sm:gap-2 shadow-sm dark:shadow-none'
+              : 'px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-lg bg-white dark:bg-[#0D1E30] border border-[#E2E8F0] dark:border-[#18344D] hover:border-[#168BFF] text-xs sm:text-sm text-[#475569] dark:text-[#A8B5C5] hover:text-[#168BFF] dark:hover:text-[#F5F7FA] hover:bg-[#F1F5F9] dark:hover:bg-[#0A1929] gap-1.5 sm:gap-2 shadow-sm dark:shadow-none'
             : isLinkedInColor
-              ? 'w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#0D1E30] border border-[#18344D] hover:border-[#0A66C2] text-[#A8B5C5] hover:text-[#0A66C2] hover:bg-[#0A1929] hover:shadow-[0_0_20px_-3px_rgba(10,102,194,0.4)] shrink-0'
-              : 'w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#0D1E30] border border-[#18344D] hover:border-[#29B6F6] text-[#A8B5C5] hover:text-[#29B6F6] hover:bg-[#0A1929] hover:shadow-[0_0_20px_-3px_rgba(41,182,246,0.35)] shrink-0';
+              ? 'w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-white dark:bg-[#0D1E30] border border-[#E2E8F0] dark:border-[#18344D] hover:border-[#0A66C2] text-[#475569] dark:text-[#A8B5C5] hover:text-[#0A66C2] hover:bg-[#F1F5F9] dark:hover:bg-[#0A1929] shadow-sm dark:shadow-none shrink-0'
+              : 'w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-white dark:bg-[#0D1E30] border border-[#E2E8F0] dark:border-[#18344D] hover:border-[#168BFF] text-[#475569] dark:text-[#A8B5C5] hover:text-[#168BFF] dark:hover:text-[#29B6F6] hover:bg-[#F1F5F9] dark:hover:bg-[#0A1929] shadow-sm dark:shadow-none shrink-0';
 
         return (
           <a
@@ -72,7 +72,7 @@ export default function SocialLinks({ links, variant = 'icons-only', className =
             target="_blank"
             rel="noopener noreferrer"
             aria-label={isWhatsApp ? 'Chat with Tajwar on WhatsApp' : `Visit Tajwar's ${item.name} profile`}
-            className={`group relative flex items-center justify-center transition-all duration-300 ${buttonClasses}`}
+            className={`group relative flex items-center justify-center transition-all duration-300 cursor-pointer ${buttonClasses}`}
           >
             <IconComponent className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:scale-110 shrink-0" />
             {variant === 'with-label' && <span className="font-medium">{item.name}</span>}

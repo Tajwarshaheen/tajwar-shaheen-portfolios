@@ -18,7 +18,7 @@ export default function SectionHeading({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.4 }}
-          className="inline-flex items-center gap-2 mb-2 sm:mb-3 text-[11px] sm:text-xs md:text-sm font-semibold tracking-wider uppercase text-[#29B6F6]"
+          className="inline-flex items-center gap-2 mb-2 sm:mb-3 text-[11px] sm:text-xs md:text-sm font-semibold tracking-wider uppercase text-[#168BFF] dark:text-[#29B6F6]"
         >
           <span className="w-4 sm:w-6 h-[2px] bg-[#168BFF]" aria-hidden="true" />
           <span>{kicker}</span>
@@ -31,7 +31,7 @@ export default function SectionHeading({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#F5F7FA] break-words"
+        className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#0F172A] dark:text-[#F5F7FA] break-words transition-colors"
         style={{ textWrap: 'balance' }}
       >
         {highlightWord ? (
@@ -52,7 +52,7 @@ export default function SectionHeading({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-2.5 sm:mt-3 text-xs sm:text-sm md:text-base text-[#A8B5C5] leading-relaxed"
+          className="mt-2.5 sm:mt-3 text-xs sm:text-sm md:text-base text-[#475569] dark:text-[#A8B5C5] leading-relaxed transition-colors"
           style={{ textWrap: 'balance' }}
         >
           {subtitle}

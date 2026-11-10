@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import SectionHeading from '../components/SectionHeading';
 import SkillCard from '../components/SkillCard';
 import { skillsData } from '../data/portfolioData';
@@ -15,7 +14,7 @@ export default function Skills() {
       : skillsData.filter((skill) => skill.category === activeCategory);
 
   return (
-    <section id="skills" className="py-14 sm:py-20 lg:py-28 bg-[#06111F] relative w-full overflow-hidden">
+    <section id="skills" className="py-14 sm:py-20 lg:py-28 bg-[#F8FAFC] dark:bg-[#06111F] relative w-full overflow-hidden transition-colors">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] sm:w-[600px] h-[350px] sm:h-[400px] bg-[#168BFF]/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -37,8 +36,8 @@ export default function Skills() {
                 onClick={() => setActiveCategory(category)}
                 className={`px-3 sm:px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 cursor-pointer ${
                   isActive
-                    ? 'bg-[#168BFF] text-white shadow-[0_0_15px_rgba(22,139,255,0.4)]'
-                    : 'bg-[#0D1E30] text-[#A8B5C5] hover:text-[#F5F7FA] border border-[#18344D] hover:border-[#168BFF]/50'
+                    ? 'bg-[#168BFF] text-white shadow-md'
+                    : 'bg-white dark:bg-[#0D1E30] text-[#475569] dark:text-[#A8B5C5] hover:text-[#0F172A] dark:hover:text-[#F5F7FA] border border-[#E2E8F0] dark:border-[#18344D] hover:border-[#168BFF]'
                 }`}
               >
                 {category}
@@ -55,8 +54,8 @@ export default function Skills() {
         </div>
 
         {/* Skills footer reassurance */}
-        <div className="mt-8 sm:mt-12 text-center text-xs text-[#A8B5C5] flex items-center justify-center gap-2 px-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#29B6F6] shrink-0" />
+        <div className="mt-8 sm:mt-12 text-center text-xs text-[#475569] dark:text-[#A8B5C5] flex items-center justify-center gap-2 px-2 transition-colors">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#168BFF] dark:bg-[#29B6F6] shrink-0" />
           <span>Focused on continuous hands-on practice, clean architectural patterns, and real-world project delivery.</span>
         </div>
       </div>
