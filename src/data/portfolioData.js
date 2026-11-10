@@ -13,7 +13,7 @@ export const personalInfo = {
   education: "Matric",
   email: "wazirsaqlain1011@gmail.com",
   phone: "+92 3485617282",
-  whatsappNumber: "+923485617282",
+  whatsappNumber: "+923485612782",
   availability: "Available for freelance projects & career opportunities",
   experienceYears: "2+ Years Learning & Building",
   completedProjectsCount: "10+",
@@ -35,27 +35,33 @@ export const personalInfo = {
 export const socialLinks = [
   {
     name: "GitHub",
-    url: "https://github.com",
+    url: "https://github.com/Tajwarshaheen",
     icon: "Github",
-    label: "github.com/tajwarshaheen",
+    label: "github.com/Tajwarshaheen",
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com",
+    url: "https://www.linkedin.com/in/tajwar-ali-81685b437/",
     icon: "Linkedin",
-    label: "linkedin.com/in/tajwarshaheen",
+    label: "linkedin.com/in/tajwar-ali-81685b437",
   },
   {
     name: "Facebook",
-    url: "https://facebook.com",
+    url: "https://www.facebook.com/profile.php?id=61593742603413",
     icon: "Facebook",
-    label: "facebook.com/tajwarshaheen",
+    label: "facebook.com/profile.php?id=61593742603413",
   },
   {
     name: "Instagram",
-    url: "https://instagram.com",
+    url: "https://www.instagram.com/tajwarali804in/",
     icon: "Instagram",
-    label: "instagram.com/tajwarshaheen",
+    label: "instagram.com/tajwarali804in",
+  },
+  {
+    name: "WhatsApp",
+    url: "https://wa.me/923485612782?text=Hello%20Tajwar%21%20I%20visited%20your%20portfolio%20website%20and%20would%20like%20to%20connect.",
+    icon: "WhatsApp",
+    label: "+92 3485617282",
   },
 ];
 

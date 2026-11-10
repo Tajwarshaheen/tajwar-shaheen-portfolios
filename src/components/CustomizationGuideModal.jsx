@@ -79,7 +79,7 @@ export default function CustomizationGuideModal({ isOpen, onClose }) {
             &nbsp;&nbsp;whatsappNumber: <span className="text-emerald-400">"+923000000000"</span>,<br />
             &#125;;
           </div>
-          <p>You can also edit each item in <code className="text-[#29B6F6] font-mono">socialLinks</code> with your exact LinkedIn, GitHub, Facebook, and Instagram URLs.</p>
+          <p>You can also edit each item in <code className="text-[#29B6F6] font-mono">socialLinks</code> with your exact LinkedIn, GitHub, Facebook, Instagram, and WhatsApp URLs.</p>
         </div>
       ),
     },
